@@ -1,0 +1,13 @@
+deploy de github:
+  stage: deploy
+  script:
+  - echo "Deploying to github"
+  only:
+  - master
+  environment:
+    name: production
+    url: https://example.com
+  when: manual
+  tags:
+  - docker
+  - kubernetes
